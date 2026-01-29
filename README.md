@@ -145,9 +145,3 @@ This work was supported by the Sichuan Science and Technology Program (No.2024ZY
 
 
 ---
-
-### **Would you like me to...**
-
-* Generate the `requirements.txt` file content based on the environment specified in the paper?
-* Draft the `lwf_yolo.yaml` model configuration file structure (guessing the layout based on standard YOLOv11 + the described modules)?
-* Create a specific section for the "Mathematical Formulation" of the MSEFE or DyDCN modul
