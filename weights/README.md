@@ -1,10 +1,14 @@
-# Bundled Checkpoints
+# Weights
 
-This repository currently includes the following checkpoint files:
+Pretrained weights are not included in this repository.
 
-- `weights/BCCD/best.pt`
-- `weights/CBC/best.pt`
-- `weights/LISC/best.pt`
-- `weights/Br35H/best.pt`
+To obtain weights, train the model using the public datasets
+listed in the main README.md under "## Datasets".
 
-If you later want a lighter GitHub repository, these files are good candidates to move into GitHub Releases or Git LFS.
+After training, place checkpoints here:
+- weights/BCCD/best.pt
+- weights/CBC/best.pt
+- weights/LISC/best.pt
+- weights/Br35H/best.pt
+
+These paths are excluded from version control via .gitignore.

@@ -27,10 +27,7 @@ LWF-YOLO/
 |-- scripts/
 |   `-- build_dcnv3.sh           # helper for compiling the DCNv3 extension
 |-- weights/
-|   |-- BCCD/best.pt
-|   |-- CBC/best.pt
-|   |-- LISC/best.pt
-|   `-- Br35H/best.pt
+|   `-- README.md   # weights are not tracked; train to reproduce
 |-- pyproject.toml
 `-- LICENSE
 ```
@@ -106,14 +103,25 @@ model = YOLO("lwf-yolo.yaml")
 
 ## Pretrained Weights
 
-The repository currently includes checkpoint files under `weights/` for:
+Pretrained weights are not stored in this repository
+(excluded via `.gitignore`). To reproduce the results,
+train from scratch using the provided configs and the
+public datasets below.
 
-- `BCCD`
-- `CBC`
-- `LISC`
-- `Br35H`
+## Datasets
 
-See `weights/README.md` for the exact files.
+All datasets used in this paper are publicly available:
+
+| Dataset | Task | Download |
+|---------|------|----------|
+| BCCD | RBC / WBC / Platelet detection | https://github.com/Shenggan/BCCD_Dataset |
+| CBC | RBC / WBC / Platelet detection | https://github.com/MahmudulAlam/Complete-Blood-Cell-Count-Dataset |
+| LISC | WBC subtype classification | http://users.cecs.anu.edu.au/~hrezatofighi/Data/Leukocyte%20Data.htm |
+| Br35H | Brain tumor detection (cross-domain) | https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection |
+
+After downloading, place each dataset under `data/<DATASET>/`
+and update the corresponding yaml config.
+A template is provided at `configs/datasets/bccd.yaml.example`.
 
 ## Results on BCCD
 
