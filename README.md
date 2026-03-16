@@ -89,7 +89,7 @@ lwf-yolo detect train \
 ```python
 from ultralytics import YOLO
 
-model = YOLO("weights/BCCD/best.pt")
+model = YOLO("weights/BCCD_best.pt")
 results = model("path/to/image.jpg")
 ```
 
@@ -114,20 +114,19 @@ Pretrained weights are available via GitHub Releases:
 | LISC_best.pt | LISC | 99.20% |
 | Br35H_best.pt | Br35H | 92.20% |
 
-After downloading, place the `.pt` files under the
-corresponding `weights/<DATASET>/best.pt` paths:
+After downloading, place the `.pt` files under `weights/`:
 ```bash
 weights/
-├── BCCD/best.pt
-├── CBC/best.pt
-├── LISC/best.pt
-└── Br35H/best.pt
+├── BCCD_best.pt
+├── CBC_best.pt
+├── LISC_best.pt
+└── Br35H_best.pt
 ```
 
 Then run inference:
 ```python
 from ultralytics import YOLO
-model = YOLO("weights/BCCD/best.pt")
+model = YOLO("weights/BCCD_best.pt")
 results = model("path/to/image.jpg")
 ```
 

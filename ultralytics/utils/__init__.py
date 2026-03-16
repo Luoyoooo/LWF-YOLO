@@ -81,7 +81,7 @@ HELP_MSG = """
 
         # Load a model
         model = YOLO("lwf-yolo.yaml")  # build the LWF-YOLO architecture from scratch
-        model = YOLO("weights/BCCD/best.pt")  # load a provided checkpoint
+        model = YOLO("weights/BCCD_best.pt")  # load a provided checkpoint
 
         # Use the model
         results = model.train(data="configs/datasets/bccd.yaml.example", epochs=3)  # train the model
@@ -104,13 +104,13 @@ HELP_MSG = """
             lwf-yolo detect train data=configs/datasets/bccd.yaml.example model=lwf-yolo.yaml epochs=10 lr0=0.01
 
         - Predict a YouTube video using a pretrained segmentation model at image size 320:
-            lwf-yolo detect predict model=weights/BCCD/best.pt source='path/to/image.jpg' imgsz=640
+            lwf-yolo detect predict model=weights/BCCD_best.pt source='path/to/image.jpg' imgsz=640
 
         - Val a pretrained detection model at batch-size 1 and image size 640:
-            lwf-yolo detect val model=weights/BCCD/best.pt data=configs/datasets/bccd.yaml.example batch=1 imgsz=640
+            lwf-yolo detect val model=weights/BCCD_best.pt data=configs/datasets/bccd.yaml.example batch=1 imgsz=640
 
         - Export a YOLO26n classification model to ONNX format at image size 224 by 128 (no TASK required)
-            lwf-yolo export model=weights/BCCD/best.pt format=onnx imgsz=640
+            lwf-yolo export model=weights/BCCD_best.pt format=onnx imgsz=640
 
         - Run special commands:
             lwf-yolo help
