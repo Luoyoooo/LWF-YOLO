@@ -116,7 +116,7 @@ All datasets used in this paper are publicly available:
 |---------|------|----------|
 | BCCD | RBC / WBC / Platelet detection | https://github.com/Shenggan/BCCD_Dataset |
 | CBC | RBC / WBC / Platelet detection | https://github.com/MahmudulAlam/Complete-Blood-Cell-Count-Dataset |
-| LISC | WBC subtype classification | http://users.cecs.anu.edu.au/~hrezatofighi/Data/Leukocyte%20Data.htm |
+| LISC | WBC subtype classification | https://universe.roboflow.com/wbcs/wbc-lisc |
 | Br35H | Brain tumor detection (cross-domain) | https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection |
 
 After downloading, place each dataset under `data/<DATASET>/`
