@@ -103,10 +103,33 @@ model = YOLO("lwf-yolo.yaml")
 
 ## Pretrained Weights
 
-Pretrained weights are not stored in this repository
-(excluded via `.gitignore`). To reproduce the results,
-train from scratch using the provided configs and the
-public datasets below.
+Pretrained weights are available via GitHub Releases:
+
+**Download:** https://github.com/Luoyoooo/LWF-YOLO/releases/tag/v1.0.0
+
+| File | Dataset | mAP@50 |
+|------|---------|--------|
+| BCCD_best.pt | BCCD | 92.50% |
+| CBC_best.pt | CBC | 95.70% |
+| LISC_best.pt | LISC | 99.20% |
+| Br35H_best.pt | Br35H | 92.20% |
+
+After downloading, place the `.pt` files under the
+corresponding `weights/<DATASET>/best.pt` paths:
+```bash
+weights/
+├── BCCD/best.pt
+├── CBC/best.pt
+├── LISC/best.pt
+└── Br35H/best.pt
+```
+
+Then run inference:
+```python
+from ultralytics import YOLO
+model = YOLO("weights/BCCD/best.pt")
+results = model("path/to/image.jpg")
+```
 
 ## Datasets
 
