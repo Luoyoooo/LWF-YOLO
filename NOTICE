@@ -1,0 +1,7 @@
+LWF-YOLO is a research repository derived from the Ultralytics YOLO codebase.
+
+Original LWF-YOLO contributions are concentrated in the custom architecture, model config, and DCNv3-backed detection
+head integration described in `docs/custom_modules.md`.
+
+The repository is released under AGPL-3.0 because it contains derivative source code from the AGPL-licensed
+Ultralytics project.

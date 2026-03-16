@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=70.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lwf-yolo"
+dynamic = ["version"]
+description = "LWF-YOLO: a lightweight YOLO11n-based detector with MSEFE, DCGFormer, and DyDCN modules."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0" }
+keywords = ["computer-vision", "object-detection", "yolo", "blood-cell-detection", "medical-imaging"]
+authors = [
+    { name = "Rui Mao" },
+    { name = "Dazhi Huang" },
+    { name = "Yuanyuan Wu" },
+    { name = "Biao Cai" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Operating System :: POSIX :: Linux",
+]
+dependencies = [
+    "numpy>=1.23.0",
+    "matplotlib>=3.3.0",
+    "opencv-python>=4.6.0",
+    "pillow>=7.1.2",
+    "pyyaml>=5.3.1",
+    "requests>=2.23.0",
+    "scipy>=1.4.1",
+    "torch>=1.8.0,<2.10",
+    "torch>=1.8.0,<2.10,!=2.4.0; sys_platform == 'win32'",
+    "torchvision>=0.9.0",
+    "psutil>=5.8.0",
+    "polars>=0.20.0",
+    "ultralytics-thop>=2.0.18",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipython",
+    "pytest",
+    "pytest-cov",
+]
+
+[project.urls]
+"Upstream Ultralytics" = "https://github.com/ultralytics/ultralytics"
+
+[project.scripts]
+lwf-yolo = "ultralytics.cfg:entrypoint"
+yolo = "ultralytics.cfg:entrypoint"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { attr = "ultralytics.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ultralytics", "ultralytics.*"]
+
+[tool.setuptools.package-data]
+ultralytics = ["py.typed", "**/*.yaml", "**/*.yml", "**/*.json", "**/*.sh"]
+"ultralytics.assets" = ["*.jpg", "*.jpeg", "*.png"]
+"ultralytics.solutions.templates" = ["*.html"]
+"ultralytics.nn.modules.ops_dcnv3.src" = ["*.h"]
+"ultralytics.nn.modules.ops_dcnv3.src.cpu" = ["*.cpp", "*.h"]
+"ultralytics.nn.modules.ops_dcnv3.src.cuda" = ["*.cu", "*.h", "*.cuh"]

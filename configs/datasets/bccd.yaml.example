@@ -1,0 +1,18 @@
+# Update `path` to match your local dataset root.
+# Expected structure:
+#   path/
+#   |-- images/
+#   |   |-- train
+#   |   `-- val
+#   `-- labels/
+#       |-- train
+#       `-- val
+
+path: /path/to/BCCD
+train: images/train
+val: images/val
+
+names:
+  0: RBC
+  1: WBC
+  2: Platelets

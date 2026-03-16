@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include NOTICE
+include requirements.txt
+recursive-include ultralytics *.yaml *.yml *.json *.sh *.html *.jpg *.jpeg *.png *.h *.cu *.cuh *.cpp py.typed
+recursive-include configs *.yaml *.yml
+recursive-include weights *.pt
+global-exclude __pycache__ *.py[cod]

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: LWF-YOLO
+message: >-
+  If you use this software, please cite it using the metadata from this file
+  and also cite the upstream Ultralytics project.
+type: software
+authors:
+  - given-names: Rui
+    family-names: Mao
+  - given-names: Dazhi
+    family-names: Huang
+  - given-names: Yuanyuan
+    family-names: Wu
+  - given-names: Biao
+    family-names: Cai
+license: AGPL-3.0
+version: 0.1.0
+date-released: "2026-03-16"

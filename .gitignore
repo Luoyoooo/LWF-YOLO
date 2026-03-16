@@ -1,0 +1,33 @@
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.coverage
+.coverage.*
+
+# Virtual environments and editor files
+.env
+.venv/
+venv/
+ENV/
+.idea/
+.vscode/
+
+# Training outputs and logs
+runs/
+wandb/
+mlruns/
+*.log
+args.yaml
+results.csv
+*.pt
+*.pth
+weights/*/
+
+# OS and notebook noise
+.DS_Store
+.ipynb_checkpoints/
