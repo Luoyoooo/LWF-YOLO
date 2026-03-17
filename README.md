@@ -54,7 +54,7 @@ This project is distributed as a standalone repository, but the runtime package 
 compatibility with the original YOLO training and inference pipeline.
 
 ```bash
-git clone <your-github-url>/LWF-YOLO.git
+git clone https://github.com/Luoyoooo/LWF-YOLO.git
 cd LWF-YOLO
 python -m pip install -e .
 ```
@@ -79,9 +79,9 @@ Use the provided template dataset file and adapt the dataset path to your machin
 lwf-yolo detect train \
   model=lwf-yolo.yaml \
   data=configs/datasets/bccd.yaml.example \
-  epochs=300 \
+  epochs=500 \
   imgsz=640 \
-  batch=16
+  batch=32
 ```
 
 ### Python inference
